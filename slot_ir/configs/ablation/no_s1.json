@@ -1,0 +1,39 @@
+{
+    "results_dir": "./results/ablation/no_s1",
+    "model": {
+        "d_model": 512,
+        "n_heads": 8,
+        "n_encoder_layers": 6,
+        "n_cross_layers": 4,
+        "token_window_sizes": [
+            10,
+            25,
+            50
+        ],
+        "max_components": 2,
+        "dropout": 0.5
+    },
+    "data": {
+        "mixture_dataset": "mix_ml_instances.h5"
+    },
+    "training": {
+        "batch_size": 64,
+        "epochs": 50,
+        "device": "cuda",
+        "num_workers": 4
+    },
+    "optim": {
+        "lr": 5e-5,
+        "weight_decay": 1e-5,
+        "stage_loss_weights": {
+            "component": 1.0
+        }
+    },
+    "stage": {
+        "stage": 2,
+        "checkpoint_path": null,
+        "early_stopping_patience": 5,
+        "early_stopping_min_delta_loss": 0.0001,
+        "early_stopping_min_delta_metric": 0.001
+    }
+}

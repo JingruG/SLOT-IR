@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "SLOT-IR: Learning Disentangled Slot Representations for Infrared Spectral Unmixing"
+authors:
+  - family-names: Gan
+    given-names: Jingru
+  - family-names: Melle
+    given-names: Yannah J.U.
+  - family-names: Zhu
+    given-names: Yanqiao
+  - family-names: Schwalbe-Koda
+    given-names: Daniel
+  - family-names: Wang
+    given-names: Wei
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "SLOT-IR: Learning Disentangled Slot Representations for Infrared Spectral Unmixing"
+  authors:
+    - family-names: Gan
+      given-names: Jingru
+    - family-names: Melle
+      given-names: Yannah J.U.
+    - family-names: Zhu
+      given-names: Yanqiao
+    - family-names: Schwalbe-Koda
+      given-names: Daniel
+    - family-names: Wang
+      given-names: Wei
+  collection-title: "Advances in Neural Information Processing Systems"
+  conference:
+    name: "40th Conference on Neural Information Processing Systems (NeurIPS 2026)"
+  year: 2026

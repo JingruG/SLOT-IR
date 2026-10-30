@@ -1,0 +1,113 @@
+{
+    "_comment": "IR band assignments aligned with Silverstein/Pavia correlation tables. Liquid-phase tolerant ranges.",
+
+    "known_ir_bands": {
+        "O-H_stretch_alcohol": [3200, 3600],
+        "O-H_stretch_acid": [2500, 3300],
+
+        "N-H_stretch": [3300, 3500],
+        "N-H_bend": [1550, 1650],
+
+        "C-H_alkane": [2850, 2960],
+        "C-H_aromatic": [3000, 3100],
+        "C-H_aldehyde": [2720, 2830],
+
+        "C≡N_nitrile": [2210, 2260],
+        "C≡C_alkyne": [2100, 2260],
+
+        "C=O_aldehyde": [1720, 1740],
+        "C=O_ketone": [1705, 1725],
+        "C=O_acid": [1700, 1725],
+        "C=O_ester": [1735, 1750],
+        "C=O_amide": [1630, 1690],
+
+        "COO-_asym": [1550, 1650],
+        "COO-_sym": [1300, 1420],
+
+        "C=C_alkene": [1620, 1680],
+        "C-C_aromatic": [1450, 1600],
+
+        "N=N_stretch": [1400, 1500],
+
+        "SO2_asym": [1300, 1350],
+        "SO2_sym": [1120, 1170],
+
+        "S-O_stretch": [1030, 1260],
+
+        "C-O_stretch": [1000, 1300],
+        "C-N_stretch": [1020, 1250],
+
+        "N-O_NO2_asym": [1500, 1600],
+        "N-O_NO2_sym": [1300, 1400],
+
+        "C-F_stretch": [1000, 1400],
+        "C-Cl_stretch": [600, 800],
+        "C-Br_stretch": [500, 650],
+        "C-I_stretch": [500, 600],
+
+        "S-H_stretch": [2550, 2600],
+        "P=O_stretch": [1100, 1250],
+
+        "C=N_stretch": [1620, 1690],
+        "S-C_stretch": [600, 750],
+
+        "Ar-O_stretch": [1200, 1270]
+    },
+
+    "fg_to_bands": {
+        "OH": ["O-H_stretch_alcohol"],
+        "COOH": ["C=O_acid", "O-H_stretch_acid"],
+
+        "NH2": ["N-H_stretch", "N-H_bend"],
+        "NH": ["N-H_stretch"],
+
+        "CHO": ["C=O_aldehyde", "C-H_aldehyde"],
+
+        "COO-": ["COO-_asym", "COO-_sym"],
+        "COO": ["C=O_ester", "C-O_stretch"],
+
+        "CONH": ["C=O_amide", "N-H_bend"],
+        "CONH2": ["C=O_amide", "N-H_stretch", "N-H_bend"],
+
+        "Ketone": ["C=O_ketone"],
+
+        "C-O-C": ["C-O_stretch"],
+
+        "C=C": ["C=C_alkene"],
+        "Ar": ["C-C_aromatic", "C-H_aromatic"],
+
+        "N=N": ["N=N_stretch"],
+        "C=N": ["C=N_stretch"],
+
+        "SO2": ["SO2_asym", "SO2_sym"],
+        "SO2NH": ["SO2_asym", "SO2_sym", "N-H_stretch"],
+        "SO2NH2": ["SO2_asym", "SO2_sym", "N-H_stretch"],
+
+        "SO3H": ["S-O_stretch", "O-H_stretch_acid"],
+
+        "NO2": ["N-O_NO2_asym", "N-O_NO2_sym"],
+
+        "SH": ["S-H_stretch"],
+
+        "C#N": ["C≡N_nitrile"],
+        "C#C": ["C≡C_alkyne"],
+
+        "P=O": ["P=O_stretch"],
+
+        "C-F": ["C-F_stretch"],
+        "C-Cl": ["C-Cl_stretch"],
+        "C-Br": ["C-Br_stretch"],
+        "C-I": ["C-I_stretch"],
+
+        "Ar-O": ["Ar-O_stretch", "C-C_aromatic"],
+        "Ar-O-C": ["C-O_stretch", "C-C_aromatic"],
+
+        "Thioether": ["S-C_stretch"],
+
+        "_merged_groups": {
+            "Amide": ["C=O_amide", "N-H_stretch", "N-H_bend"],
+            "Sulfonamide": ["SO2_asym", "SO2_sym", "N-H_stretch"],
+            "Halide": ["C-F_stretch", "C-Cl_stretch", "C-Br_stretch", "C-I_stretch"]
+        }
+    }
+}

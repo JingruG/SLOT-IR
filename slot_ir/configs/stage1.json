@@ -1,0 +1,33 @@
+{
+    "results_dir": "./results/stage1",
+    "model": {
+        "d_model": 512,
+        "n_heads": 8,
+        "n_encoder_layers": 6,
+        "n_cross_layers": 4,
+        "token_window_sizes": [
+            10,
+            25,
+            50
+        ],
+        "max_components": 2,
+        "dropout": 0.1
+    },
+    "training": {
+        "batch_size": 64,
+        "epochs": 200,
+        "device": "cuda",
+        "num_workers": 4
+    },
+    "optim": {
+        "lr": 5e-5,
+        "weight_decay": 1e-5,
+        "stage_loss_weights": {
+            "translation": 1.0,
+            "similarity": 1.0
+        }
+    },
+    "stage": {
+        "stage": 1
+    }
+}
